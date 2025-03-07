@@ -13,6 +13,7 @@ export class UserController {
         const userEntity = new UserEntity();
 
         userEntity.uuid = uuid();
+        userEntity.name = userData.name;
         userEntity.email = userData.email;
         userEntity.password = userData.password;
 
