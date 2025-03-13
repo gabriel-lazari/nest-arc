@@ -2,8 +2,11 @@ import { Entity, Column, CreateDateColumn, UpdateDateColumn, DeleteDateColumn, P
 
 @Entity({ name: 'users' })
 export class UserEntity {
+    @PrimaryGeneratedColumn('increment')
+    id: number
+
     @PrimaryGeneratedColumn('uuid')
-    id: string
+    uuid: string
 
     @CreateDateColumn({ name: 'created_at' })
     created_at: string;
@@ -11,8 +14,8 @@ export class UserEntity {
     @UpdateDateColumn({ name: 'updated_at' })
     updated_at: string;
 
-    @DeleteDateColumn({ name: 'deleted_at' })
-    deleted_at: string;
+    @Column({ name: 'is_active', nullable: false, default: true })
+    is_active: boolean;
 
     @Column({ name: 'name', length: 100, nullable: false })
     name: string;
