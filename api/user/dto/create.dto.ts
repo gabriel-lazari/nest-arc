@@ -1,4 +1,4 @@
-import { IsEmail, IsNotEmpty, minLength, MinLength } from "class-validator";
+import { IsEmail, IsNotEmpty, MinLength } from "class-validator";
 import { IsExistThisEmail } from "../validation/emailValidator";
 
 export class CreateDTO {

@@ -25,4 +25,16 @@ export class UserEntity {
 
     @Column({ name: 'password', length: 255, nullable: false })
     password: string;
+
+    @Column({ name: 'store_id', nullable: true })
+    store_id: string;
+
+    @Column({ name: 'symbolic_degree_id', nullable: true })
+    symbolic_degree_id: string;
+
+    @Column({ name: 'birthday', nullable: true })
+    birthday: string;
+
+    @DeleteDateColumn({ name: 'deleted_at', nullable: true })
+    deleted_at: string;
 }
