@@ -11,4 +11,4 @@ import { LiveRepository } from "./live.repository";
     providers: [LiveService, LiveRepository]
 })
 
-export class UserModule {};
+export class LiveModule {};
